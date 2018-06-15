@@ -90,4 +90,8 @@ label {
   cursor: pointer;
 }
 
+.form-group {
+  margin-bottom: 50px;
+}
+
 /* font-family: 'Press Start 2P', cursive; */
