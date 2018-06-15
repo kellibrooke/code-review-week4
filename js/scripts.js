@@ -54,12 +54,10 @@ $("#order-button").click(function(){
     order.toppings.push(topping);
     $("ul#toppings").append("<li>" + topping + "</li>");
   })
-console.log(order.toppings.length);
   var size = order.valueToSize();
   var price = order.calculatePrice();
   $("#pizza-size").text(size);
   $("#pizza-price").text("$ " + price);
-
   validate(orderName, toppingsLength);
 })
 
