@@ -1,8 +1,8 @@
 // BUSINESS LOGIC
-function Order(name, size, toppings){
+function Order(name, size){
   this.name = name;
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
   this.price = 0;
 }
 
@@ -25,10 +25,14 @@ $(function(){
 var order = new Order();
 $("#order-button").click(function(){
   event.preventDefault();
-  var orderName = $("#name-for-order").val();
-  var orderSize = $("input:radio[name=choose-size]:checked").val();
-  var orderToppings =
-  order.name = orderName;
+  order.name = $("#name-for-order").val();
+  order.size = $("input:radio[name=choose-size]:checked").val();
+  $("input:checkbox[name=toppings]:checked").each(function(){
+    var topping = $(this).val();
+    order.toppings.push(topping);
+  })
+  order.calculatePrice();
+  console.log(order);
 })
 
 
