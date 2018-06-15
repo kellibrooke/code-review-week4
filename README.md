@@ -25,9 +25,6 @@ _The instructions for this project are as follows:_
 * When a pizza is customized by the user, add costs of toppings and size to determine the price of the pizza.
 * Display toppings, size and price of the pizza to the user.
 
-### Known Bugs/Issues
-
-
 ## Setup/Installation Requirements
 
 * _Here is the [link](https://github.com/kellibrooke/code-review-week4) to the GitHub repository for this site_
