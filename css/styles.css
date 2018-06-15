@@ -38,6 +38,33 @@ form {
   padding:20px;
   background-color:beige;
   border-radius: 6px;
+  border:2px #ba0f0f dotted;
+}
+
+#order-confirmation-area {
+  padding:20px;
+  background-color:beige;
+  border-radius: 6px;
+  border:2px #ba0f0f dotted;
+  display: none;
+}
+
+#order-confirmation-area p {
+  text-shadow: 0 0 1px #ba0f0f;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#order-confirmation-area li {
+  text-shadow: 0 0 1px #ba0f0f;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px black;
+  box-shadow: 1px 1px 2px black;
+  margin-top:20px;
 }
 
 .size-image {

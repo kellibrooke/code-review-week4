@@ -17,7 +17,7 @@
         <small>The Savory Kind</small>
       </div>
       <div id="order-form-div">
-        <form>
+        <form id="order-form">
           <h1 class="header-h1">Customize Your Pizza!</h1>
           <div class="form-group">
             <h4>Enter your name:</h4>
@@ -87,12 +87,12 @@
               </div>
             </div>
           </div>
-          <button id="order-button" class="btn btn-info" type="submit">Place My Order!</button>
+          <button id="order-button" class="btn btn-danger" type="submit">Place My Order!</button>
         </form>
       </div>
 
     <div id="order-confirmation-area">
-      <h1>Your Order:</h1>
+      <h1 class="header-h1">Here's what you ordered, <span id="order-confirm-name"></span>:</h1>
       <p>1 <span id="pizza-size"></span> Pizza</p>
       <p>Toppings:</p>
       <ul id="toppings">
@@ -100,7 +100,7 @@
       </ul>
 
       <p>Price: <span id="pizza-price"></span></p>
-
+      <button id="order-again-button" class="btn btn-danger" type="submit">Place Another Order!</button>
     </div>
   </div>
 </body>

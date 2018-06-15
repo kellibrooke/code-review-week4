@@ -28,10 +28,14 @@ Order.prototype.valueToSize = function(){
 $(function(){
 
 var order = new Order();
+
 $("#order-button").click(function(){
   event.preventDefault();
-
-
+  $("#order-form-div").hide();
+  order.toppings.length = 0;
+  var orderName = $("#name-for-order").val();
+  $("#order-confirm-name").text(orderName);
+  $("ul#toppings").text("");
   order.name = $("#name-for-order").val();
   order.size = parseInt($("input:radio[name=choose-size]:checked").val());
   $("input:checkbox[name=toppings]:checked").each(function(){
@@ -44,7 +48,13 @@ $("#order-button").click(function(){
   var price = order.calculatePrice();
   $("#pizza-size").text(size);
   $("#pizza-price").text("$ " + price);
+  document.getElementById("order-form").reset();
+  $("#order-confirmation-area").slideDown();
+})
 
+$("#order-again-button").click(function(){
+  $("#order-confirmation-area").hide();
+  $("#order-form-div").slideDown();
 })
 
 
