@@ -16,30 +16,22 @@ Order.prototype.calculatePrice = function(){
   }
 
   this.price += (this.toppings.length * 1)
-  // CLEAN UP THE ABOVE BY MAKING MATHEMATICAL EQUATION BASED ON TOPPINGS.LENGTH TO ADJUST LENGTH INSTEAD OF IF ELSE
 }
-
-
-
 
 
 // UI LOGIC
 $(function(){
 
 var order = new Order();
-// console.log(order);
-// order.calculatePrice();
-// console.log(order);
 $("#order-button").click(function(){
   event.preventDefault();
   var orderName = $("#name-for-order").val();
   var orderSize = $("input:radio[name=choose-size]:checked").val();
-  var orderToppings = 
+  var orderToppings =
   order.name = orderName;
 })
 
 
-// order.calculatePrice();
 
 
 
