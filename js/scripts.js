@@ -7,15 +7,20 @@ function Order(name, size){
 }
 
 Order.prototype.calculatePrice = function(){
-  if (this.size === "small") {
-    this.price = 8;
-  } else if (this.size === "medium") {
-    this.price = 12;
-  } else if (this.size === "large") {
-    this.price = 16;
-  }
+  this.price = this.size + (this.toppings.length *1)
+  return this.price;
+}
 
-  this.price += (this.toppings.length * 1)
+Order.prototype.valueToSize = function(){
+  var sizeWord;
+  if(this.size === 8){
+    sizeWord = "Small";
+  } else if (this.size === 12){
+    sizeWord = "Medium";
+  } else {
+    sizeWord = "Large"
+  }
+  return sizeWord;
 }
 
 
@@ -25,15 +30,23 @@ $(function(){
 var order = new Order();
 $("#order-button").click(function(){
   event.preventDefault();
+
+
   order.name = $("#name-for-order").val();
-  order.size = $("input:radio[name=choose-size]:checked").val();
+  order.size = parseInt($("input:radio[name=choose-size]:checked").val());
   $("input:checkbox[name=toppings]:checked").each(function(){
     var topping = $(this).val();
     order.toppings.push(topping);
+    $("ul#toppings").append("<li>" + topping + "</li>");
   })
-  order.calculatePrice();
-  console.log(order);
+
+  var size = order.valueToSize();
+  var price = order.calculatePrice();
+  $("#pizza-size").text(size);
+  $("#pizza-price").text("$ " + price);
+
 })
+
 
 
 
