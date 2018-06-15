@@ -19,7 +19,11 @@ _The instructions for this project are as follows:_
 
 ### Specifications
 
-* 
+* Create a pizza with options for toppings and size.
+* Create a list of available toppings with different prices for each topping.
+* Create a list of sizes with different prices for each size.
+* When a pizza is customized by the user, add costs of toppings and size to determine the price of the pizza.
+* Display toppings, size and price of the pizza to the user.
 
 ### Known Bugs/Issues
 
