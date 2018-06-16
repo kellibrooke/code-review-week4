@@ -1,7 +1,7 @@
 #jumbotron-div{
   color:#ba0f0f;
   text-shadow: 0 0 20px #dfc949;
-  background-image: url("/Users/kellimccloskey/Desktop/Epicodus/Week4/code-review/img/pizza-moon.jpg");
+  background-image: url("../img/pizza-moon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -12,7 +12,7 @@
 }
 
 #name-for-order {
-  width: 400px
+  width: 400px;
 }
 
 h4 {
